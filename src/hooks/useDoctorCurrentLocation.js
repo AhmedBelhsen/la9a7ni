@@ -10,7 +10,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { haversineDistance } from '../tools/distancetool'; // Import the haversineDistance function
 
-const useDoctor = (collectionName) => {
+const useDoctorCurrentLocation = (collectionName) => {
   const [doctors, setDoctors] = useState([]);
   const [closestDoctor, setClosestDoctor] = useState(null);
 
@@ -66,4 +66,4 @@ const getUserLocation = () => {
   });
 };
 
-export default useDoctor;
+export default useDoctorCurrentLocation;
