@@ -13,6 +13,11 @@ body, html {
     margin-bottom: 20px;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.2rem; /* Adjust the size as needed */
+    margin-top: 0.2rem; /* Adjust spacing if needed */
+  }
 .heading-image {
     height: 50px; /* Adjust size as needed */
     width: auto; /* Maintain aspect ratio */
@@ -48,7 +53,7 @@ label {
 }
 
 label input {
-    width: 100%;
+    width: 70dvh;
     padding: 10px;
     margin-top: 5px;
     border-radius: 8px;
@@ -68,7 +73,7 @@ button[type="submit"] {
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;
+    width: 70dvh;
     font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s ease;
