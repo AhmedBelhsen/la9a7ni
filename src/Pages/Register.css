@@ -1,0 +1,96 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+    background-color: #f2f2f2;
+}
+
+.image {
+    position: absolute; /* Absolute positioning for flexibility */
+    left: calc(75% - 150px); /* Center image horizontally relative to form */
+    top: 13%; /* Position image near the top of the form */
+    height: 100px; /* Adjust height as needed */
+    width: 120px; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it stays above the background but below the form content */
+    transform: rotate(-40deg);
+}
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff, #4f85d0cc);
+}
+
+.signupform {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    text-align: center;
+    
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+label input:focus {
+    border-color: #a9c2e6cc;
+}
+
+button[type="submit"] {
+    background-color: #a9c2e6cc;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1f6ad4cc;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #eeeeee;
+}
+
+p {
+    color: #666666;
+}
+
+p a {
+    color: #000000cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
