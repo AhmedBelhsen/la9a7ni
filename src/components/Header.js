@@ -2,12 +2,15 @@ import React, { useEffect } from 'react';
 import '../App.css';
 import husky from '../img/husky.png';
 import team1 from '../img/team1.png';
+import team11 from '../img/team11.png';
+
 import team2 from '../img/team2.png';
 import team3 from '../img/team3.png';
 import rabiesImage from '../img/rabies.png';
 import animalsImage from '../img/animals.png';
 import { Routes } from '../configs/routes';
 import { Link } from 'react-router-dom';
+import RectangleSection from './RectangleSection';
 
 const Header = () => {
 
@@ -48,8 +51,7 @@ const Header = () => {
       <nav className="nav">
         <Link className="nav-link"  to={Routes.HOME}>About Us</Link>
         <Link className="nav-link"  to={Routes.SIGNUP}>Create Account</Link>
-        <Link className="nav-link" to={Routes.LOGIN}>Login</Link>
-        <Link className="nav-link"  to={Routes.GETVACCINATED}>Get Vaccinated</Link>
+        <Link className="nav-link" to={Routes.LOGIN}>Login to vaccinate</Link>
       </nav>
 
       <div className="title-description">
@@ -63,35 +65,31 @@ const Header = () => {
           <div className="team">
             <div className="team_member border-frame">
               <div className="team_img">
-                <img src={team1} alt="Team_image" />
-              </div>
-              <h3>Eya</h3>
-              <p className="role">Front-end</p>
-              <p>Something as a description</p>
-            </div>
-            <div className="team_member border-frame">
-              <div className="team_img">
                 <img src={team2} alt="Team_image" />
               </div>
-              <h3>Ahmed</h3>
-              <p className="role">backend</p>
-              <p>Something as a description</p>
-            </div>
-            <div className="team_member border-frame">
-              <div className="team_img">
-                <img src={team2} alt="Team_image" />
-              </div>
-              <h3>Yassine</h3>
-              <p className="role">UI-UX</p>
-              <p>Something as a description</p>
+              <h3>Eya Taouali</h3>
+              <p className="role">Data-engineer</p>
             </div>
             <div className="team_member border-frame">
               <div className="team_img">
                 <img src={team3} alt="Team_image" />
               </div>
-              <h3>Roua</h3>
-              <p className="role">Presentation</p>
-              <p>Something as a description</p>
+              <h3>Ahmed Belhsen</h3>
+              <p className="role">G.L engineer </p>
+            </div>
+            <div className="team_member border-frame">
+              <div className="team_img">
+                <img src={team11} alt="Team_image" />
+              </div>
+              <h3>Yassine Barboura </h3>
+              <p className="role">UI-UX front-en developer</p>
+            </div>
+            <div className="team_member border-frame">
+              <div className="team_img">
+                <img src={team2} alt="Team_image" />
+              </div>
+              <h3>Roua Mili</h3>
+              <p className="role">Full stack engineer</p>
             </div>
           </div>
         </div>
@@ -126,6 +124,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Rectangle Section */}
+        
     </div>
   );
 };

@@ -1,0 +1,72 @@
+/* src/RectangleSection.css */
+
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Agras:wght@400;700&display=swap');
+
+.rectangle-section {
+    margin: 80px 0 20px 0; /* Augmente la marge supérieure pour descendre les rectangles */
+    display: flex; /* Utilise flexbox pour aligner les rectangles côte à côte */
+    gap: 300px; /* Espacement entre les rectangles */
+}
+
+.rectangle {
+    width: 900px;
+    height: 700px;
+    background-color: #ffffff;
+    border: 3px solid #96959585;
+    display: inline-block;
+    position: relative;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre avec un effet 3D */
+    margin-bottom: -600px; /* Ajuste la marge inférieure selon vos besoins */
+    margin-left: 20px; /* Décale le rectangle vers la droite */
+    background-image: url('C:/Users/LENOVO/Desktop/la9a7ni/src/assets/images/post.png'); /* Remplacez par le chemin de votre image */
+    background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
+    background-position: center; /* Centre l'image dans le rectangle */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.rectangle-right {
+    flex: 2; /* Utilise 2 fois moins d'espace que le rectangle */
+    height: 700px;
+    width: 300px; /* Réduit la largeur du deuxième rectangle */
+    margin-right: 300px;
+    background-color: #f0f0f0; /* Couleur de fond du deuxième rectangle */
+    border: 3px solid #96959585;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre avec un effet 3D */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre horizontalement le texte */
+    justify-content: center; /* Centre verticalement le texte */
+    background-image: url('C:/Users/LENOVO/Desktop/la9a7ni/src/assets/images/thanks.png'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* Couvre entièrement le rectangle */
+    background-position: center; /* Centre l'image dans le rectangle */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    padding: 20px; /* Ajoute du padding pour éviter que le texte ne touche les bords */
+    color: #ffffff; /* Couleur du texte en blanc pour qu'il contraste avec l'image de fond */
+    text-align: center; /* Centre le texte */
+    margin-bottom: -600px; /* Ajuste la marge inférieure selon vos besoins */
+
+}
+
+.rectangle-text {
+    font-family: 'Agras', cursive; /* Applique la police cursive */
+    font-size: 24px; /* Taille de police */
+    color: #1c2c41; /* Couleur du texte en noir */
+    text-align: center; /* Centre le texte */
+}
+/* Nouvelle classe pour le texte entre <br /> */
+.rectangle-text-item {
+    color: #000000; /* Couleur du texte en noir */
+    font-size: 16px; /* Taille de la police, ajustez selon vos besoins */
+    line-height: 0.1; /* Espacement entre les lignes */
+    font-family: 'Agras', cursive; /* Applique la police cursive */
+    text-align: center; /* Centre le texte */
+}
+.rectangle-text-item strong {
+    color: #000000; /* Couleur du texte en noir */
+    font-size: 16px; /* Taille de la police, ajustez selon vos besoins */
+    line-height: 0.1; /* Espacement entre les lignes */
+    font-family: 'Agras', cursive; /* Applique la police cursive */
+    text-align: center; /* Centre le texte */
+}
+
