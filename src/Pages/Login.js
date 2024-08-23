@@ -8,6 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Routes } from '../configs/routes';
 
 // Define validation schema
 const schema = yup.object().shape({
@@ -73,7 +74,7 @@ export const Login = () => {
         <button type="submit">Login</button>
         <br />
         <hr />
-        <p>Don't have an account? <Link to="/Register">Register</Link></p>
+        <p>Don't have an account? <Link to={Routes.SIGNUP}>Register</Link></p>
       </form>
       <ToastContainer />
     </div>

@@ -4,6 +4,9 @@ import { Routes as ROUTES } from "../configs/routes";
 import {MainLayout} from "../layout/index";
 import LandingPage from '../pages/landingPage'
 
+import  Login  from '../pages/Login';
+import Register from '../pages/Register';
+
 const RoutingModule = () => {
     return (
         <BrowserRouter>
@@ -12,8 +15,8 @@ const RoutingModule = () => {
                     <Route path={ROUTES.HOME} element={<LandingPage />} />
                     <Route path={ROUTES.GETVACCINATED} element={<MainLayout />} />
 
-                    <Route path={ROUTES.LOGIN} element={<h1>login</h1>} />
-                    <Route path={ROUTES.SIGNUP} element={<h1>signup</h1>} />
+                    <Route path={ROUTES.LOGIN} element={<Login />} />
+                    <Route path={ROUTES.SIGNUP} element={<Register />} />
                     <Route path={ROUTES.PETVAC} element={<h1>petVac</h1>} />
                     <Route path={ROUTES.HUMANVAC} element={<h1>humanVac</h1>} />
                 </Routes>

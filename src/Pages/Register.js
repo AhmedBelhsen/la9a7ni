@@ -12,6 +12,8 @@ import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { Routes } from '../configs/routes';
+
 // Define validation schema
 const schema = yup.object().shape({
   fullName: yup.string().required('Full Name is required'),
@@ -90,7 +92,7 @@ export const Register = () => {
         <button type="submit">Create Account</button>
         <br />
         <hr />
-        <p>Already registered? <Link to="/Login">Login</Link></p>
+        <p>Already registered? <Link to={Routes.LOGIN}>Login</Link></p>
       </form>
       <ToastContainer />
     </div>

@@ -49,6 +49,7 @@ label {
     display: block;
     margin-bottom: 15px;
     text-align: left;
+    color: black;
 }
 
 label input {
@@ -59,6 +60,7 @@ label input {
     border: 1px solid #dddddd;
     outline: none;
     transition: border-color 0.3s ease;
+    color: black
 }
 
 label input:focus {
