@@ -1,15 +1,17 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import LandingImages from '../components/landingImages'
 
-
+import Header from '../components/Header';
+import MapComponent from '../components/MapComponent';
+import Footer from '../components/Footer';
 
 
 function LandingPage() {
   return (
-    <Container fluid>
-     <LandingImages/>
-    </Container>
+    <>
+      <Header />
+      <MapComponent /> {/* Intégrez la carte ici */}
+      <Footer />
+    </>
   );
 }
 

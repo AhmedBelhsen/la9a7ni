@@ -6,6 +6,8 @@ import team2 from '../img/team2.png';
 import team3 from '../img/team3.png';
 import rabiesImage from '../img/rabies.png';
 import animalsImage from '../img/animals.png';
+import { Routes } from '../configs/routes';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -44,10 +46,10 @@ const Header = () => {
       </header>
 
       <nav className="nav">
-        <a className="nav-link" href="#">About Us</a>
-        <a className="nav-link" href="#">Create Account</a>
-        <a className="nav-link" href="#">Login</a>
-        <a className="nav-link" href="#">Get Vaccinated</a>
+        <Link className="nav-link"  to={Routes.HOME}>About Us</Link>
+        <Link className="nav-link"  to={Routes.SIGNUP}>Create Account</Link>
+        <Link className="nav-link" to={Routes.LOGIN}>Login</Link>
+        <Link className="nav-link"  to={Routes.GETVACCINATED}>Get Vaccinated</Link>
       </nav>
 
       <div className="title-description">
