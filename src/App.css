@@ -11,6 +11,19 @@
 
 
 }
+.rectangle-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.rectangle {
+  width: 300px; /* Largeur du rectangle */
+  height: 150px; /* Hauteur du rectangle */
+  background-color: #ddd; /* Couleur de fond du rectangle */
+  border: 1px solid #ccc; /* Bordure du rectangle */
+  display: inline-block;
+}
+
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -78,7 +91,7 @@ body {
   align-self: center;
   font-family: 'Concert One', cursive;
   font-size: 2.5em;
-  color: #ffffff;
+  background-color: #778da9;
 }
 
 .blink {
@@ -141,17 +154,13 @@ body {
   transform: translateX(100%); /* Initialement décalé à droite pour l'animation */
 }
 
-
-
-
-
 .nav {
   display: flex;
   flex-direction: row;
   font-family: 'Agras', cursive;
   font-weight: 700;
   justify-content: center; /* Centre les éléments de la barre de navigation */
-  gap: 300px; /* Ajuste la distance entre les éléments de la barre de navigation */
+  gap: 450px; /* Ajuste la distance entre les éléments de la barre de navigation */
   background-color: #1d3557;
 }
 
@@ -188,6 +197,8 @@ body {
   font-size: 52px;
   margin-bottom: 60px;
   text-align: center;
+  color: #000000; /* Ajoutez cette ligne pour changer la couleur en noir */
+
 }
 
 .team {
