@@ -1,38 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
-import huskyImg from '../../assets/images/husky.png'; // Adjust the path as necessary
 
 const Header = styled.header`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: #a9c2e6cc;
-  margin-bottom: -40px;
-  align-items: center;
+  position: absolute; /* Position the header absolutely */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: #ffffff; /* White background */
+  margin: 0; /* Remove default margin */
 `;
 
-const HeaderTitle = styled.h1`
-  font-family: 'Concert One', cursive;
-  font-size: 4em;
-  color: #ffffff;
-  margin: 0;
-`;
+const NavButton = styled.button`
+  background-color: #007bff; /* Primary blue */
+  color: #ffffff; /* White text color */
+  font-size: 1rem;
+  padding: 8px 16px; /* Adjust padding for a smaller button */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  position: absolute; /* Position the button absolutely within the header */
+  top: 10px; /* Minimal space from the top */
+  left: 10px; /* Minimal space from the left */
+  transition: background-color 300ms, transform 300ms, box-shadow 300ms;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
 
-const HeaderImg = styled.div`
-  margin-left: 20px; // Adjust spacing as needed
+  &:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
 
-  img {
-    width: 50%;
+  &:active {
+    background-color: #004085; /* Even darker blue when clicked */
+    transform: scale(0.98); /* Slightly reduce size on click */
   }
 `;
 
 const AppHeader = () => (
   <Header>
-    <HeaderTitle>Find a Pet</HeaderTitle>
-    <HeaderImg>
-      <img src={huskyImg} alt="husky-and-cat" />
-    </HeaderImg>
+    <NavButton>
+      Back
+    </NavButton>
   </Header>
 );
 
 export default AppHeader;
+
