@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { doc, updateDoc } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import { db } from '../Config/firebase';
 
 const VetCard = ({ vet }) => {
   const [vaccinesNb, setVaccinesNb] = useState(vet?.vaccinesDonated || 0);

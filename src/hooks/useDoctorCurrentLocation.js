@@ -7,7 +7,7 @@
 
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import { db } from '../Config/firebase';
 import { haversineDistance } from '../tools/distancetool'; // Import the haversineDistance function
 
 const useDoctorCurrentLocation = (collectionName) => {
