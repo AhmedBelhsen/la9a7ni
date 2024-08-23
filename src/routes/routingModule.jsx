@@ -6,6 +6,8 @@ import LandingPage from '../pages/landingPage'
 
 import  Login  from '../pages/Login';
 import Register from '../pages/Register';
+import FindHospital from "../pages/FindHospital";
+import FindVet from "../pages/FindVet";
 
 const RoutingModule = () => {
     return (
@@ -17,8 +19,8 @@ const RoutingModule = () => {
 
                     <Route path={ROUTES.LOGIN} element={<Login />} />
                     <Route path={ROUTES.SIGNUP} element={<Register />} />
-                    <Route path={ROUTES.PETVAC} element={<h1>petVac</h1>} />
-                    <Route path={ROUTES.HUMANVAC} element={<h1>humanVac</h1>} />
+                    <Route path={ROUTES.PETVAC} element={<FindVet/>} />
+                    <Route path={ROUTES.HUMANVAC} element={<FindHospital/>} />
                 </Routes>
             
         </BrowserRouter>
