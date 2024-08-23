@@ -1,7 +1,7 @@
 import React from 'react';
 import './Register.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { app, auth, db } from '../Config/Config';
+import { auth, db } from '../Config/Config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 
@@ -20,13 +20,8 @@ const schema = yup.object().shape({
 });
 
 export const Register = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const {  register,  handleSubmit,  formState: { errors },} = useForm({resolver: yupResolver(schema), });
+
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
@@ -72,40 +67,25 @@ export const Register = () => {
 
   return (
     <div className="signup">
-      <form
-        className='signupform'
-        onSubmit={handleSubmit((data) => {
-          showValidationErrors();
-          onSubmit(data);
+      <form className='signupform' onSubmit={handleSubmit((data) => {  showValidationErrors();   onSubmit(data);
         })}
       >
         <h2>Register</h2>
         <label htmlFor='fullName'>
           Full Name:
           <br/>
-          <input
-            type="text"
-            placeholder='Full Name'
-            {...register('fullName')}
+          <input type="text" placeholder='Full Name' {...register('fullName')}
           />
         </label>
         <label htmlFor='email'>
           Email:
           <br/>
-          <input
-            type="text"
-            placeholder='Email'
-            {...register('email')}
-          />
+          <input  type="text"  placeholder='Email'  {...register('email')}/>
         </label>
         <label htmlFor='password'>
           Password:
           <br/>
-          <input
-            type="password"
-            placeholder='Password'
-            {...register('password')}
-          />
+          <input type="password" placeholder='Password' {...register('password')} />
         </label>
         <button type="submit">Create Account</button>
         <br />

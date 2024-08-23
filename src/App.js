@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path="/Login" element ={<Login/>}/>
         <Route path="/Slider" element ={<Slider/>}/>
-
         <Route path="/Register" element ={<Register/>}/>
         <Route path="" element={<Navigate to="/Register" replace />} />
         <Route path="/home" element={<Home/>}></Route>
