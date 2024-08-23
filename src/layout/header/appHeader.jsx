@@ -13,7 +13,7 @@ const Header = styled.header`
 `;
 
 const NavButton = styled.button`
-  background-color: #007bff; /* Primary blue */
+  background-color: #1D3557; /* Primary blue */
   color: #ffffff; /* White text color */
   font-size: 1rem;
   padding: 8px 16px; /* Adjust padding for a smaller button */
