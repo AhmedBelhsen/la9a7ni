@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Header = styled.header`
   position: absolute; /* Position the header absolutely */
@@ -39,9 +40,11 @@ const NavButton = styled.button`
 
 const AppHeader = () => (
   <Header>
+    <Link to="/">
     <NavButton>
       Back
     </NavButton>
+    </Link>
   </Header>
 );
 

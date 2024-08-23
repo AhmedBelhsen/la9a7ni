@@ -1,6 +1,10 @@
 export const Routes = {
     HOME: '/',
+    GETVACCINATED: "/getVaccinated",
+    
     LOGIN: "/login",
     SIGNUP: "/signup",
-    GETVACCINATED: "/getVaccinated"
+
+    PETVAC: "/petvac",
+    HUMANVAC: "/humanvac"
 };

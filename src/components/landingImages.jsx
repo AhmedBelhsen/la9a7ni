@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components'; // Import createGlobalStyle
 import dogCat from '../assets/images/pet1.jpg';
 import humain from '../assets/images/img2.jpg';
+import { Link } from 'react-router-dom';
+import { Routes } from '../configs/routes';
 
 // Apply these styles globally in your app or in a global styles file
 const GlobalStyle = createGlobalStyle`
@@ -114,11 +116,15 @@ const LandingImages = () => (
     <Section>
       <Product>
         <ProductImg src={dogCat} alt="dog and cat" />
+        <Link to={Routes.PETVAC}>
         <ProductButton className="product-button">I am a pet owner</ProductButton>
+        </Link>
       </Product>
       <Product>
         <ProductImg src={humain} alt="human" />
+        <Link to={Routes.HUMANVAC}>
         <ProductButton className="product-button">I want to get vaccinated</ProductButton>
+        </Link>
       </Product>
     </Section>
   </>
