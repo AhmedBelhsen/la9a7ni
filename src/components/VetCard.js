@@ -1,32 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
 const VetCard = ({ vet }) => {
-  const handleBook = async (vetId, vetName, vaccinesDonated) => {
-    if (vaccinesDonated > 0) {
+  const [vaccinesNb, setVaccinesNb] = useState(vet?.vaccinesDonated || 0);
+
+  useEffect(() => {
+    if (vet) {
+      setVaccinesNb(vet.vaccinesDonated);
+    }
+  }, [vet]);
+
+  const handleBook = async () => {
+    if (vaccinesNb > 0) {
       // Update the vaccinesDonated field in Firestore
-      const vetDoc = doc(db, 'vets', vetId);
+      const vetDoc = doc(db, 'vets', vet.id);
       await updateDoc(vetDoc, {
-        vaccinesDonated: vaccinesDonated - 1,
+        vaccinesDonated: vaccinesNb - 1,
       });
 
-      alert(`Booking appointment with ${vetName}`);
+      setVaccinesNb(vaccinesNb - 1); // Update state locally
+      alert(`Booking appointment with ${vet.name}`);
     } else {
-      alert(`${vetName} has no vaccines left to donate.`);
+      alert(`${vet.name} has no vaccines left to donate.`);
     }
   };
 
   return (
-    <div className="vet-card">
-      <h3>{vet.name}</h3>
-      <p>Location: {vet.location}</p>
-      <p>Vaccines Available: {vet.vaccinesDonated}</p>
-      <button className='book-button'
-        onClick={() =>
-          handleBook(vet.id, vet.name, vet.vaccinesDonated)
-        }
-        disabled={vet.vaccinesDonated <= 0}
+    <div className="doctor-card">
+      <h2>{vet.name}</h2>
+      <h3>Location: {vet.location}</h3>
+      <h4>Vaccines Available: {vaccinesNb}</h4>
+      <button
+        className='book-button'
+        onClick={handleBook}
+        disabled={vaccinesNb <= 0}
       >
         Book Appointment
       </button>

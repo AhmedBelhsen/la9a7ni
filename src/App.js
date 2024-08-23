@@ -1,25 +1,24 @@
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react';
+
 import VetCard from './components/VetCard';
 import useDoctorCurrentLocation from './hooks/useDoctorCurrentLocation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import RoutingModule from './routes/routingModule.jsx';
 
 function App() {
   const { doctors } = useDoctorCurrentLocation('vets');
-
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <h1>Vets in </h1>
-        <div>
-          {doctors.map((vet) => (
-             
-            <VetCard key={vet.id} vet={vet} />
-            
-          ))}
-        </div>
-      </header>
+
+    <RoutingModule />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+

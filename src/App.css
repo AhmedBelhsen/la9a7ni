@@ -1,38 +1,552 @@
-.App {
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Agras:wght@400;700&display=swap');
+
+/* Styles globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 20px; /* Coins arrondis */
+
+
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Appliquer l'animation à la classe border-frame */
+.border-frame {
+  border: 3px solid #96959585; /* Couleur et largeur du cadre */
+  padding: 20px; /* Espacement interne */
+  border-radius: 20px; /* Coins arrondis */
+  margin: 10px auto; /* Espacement externe avec centrage horizontal */
+  width: 50%; /* Largeur minimale du conteneur (ajustez selon vos besoins) */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4); /* Ombre du cadre, plus élevée */
+  background-color: #f8f8f6; /* Couleur de fond beige clair */
+
+  /* Animation */
+  animation: zoomIn 0.9s ease-in-out; /* Animation de zoom sur 0.5 secondes */
+}
+
+
+.container-border {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text horizontally */
+
+
+  }
+  
+
+
+.rabies-image{
+
+  display: flex;
+  justify-content: center; /* Aligns horizontally */
+  align-items: center;
+}
+.rabies-image img{
+  max-width: 100%;
+  height :auto; 
+} 
+
+.flex-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #778da9;
+  margin-bottom: -40px;
+}
+
+.flex-header h1 {
+  align-self: center;
+  font-family: 'Concert One', cursive;
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+.blink {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  60% {
+    opacity: 0.6;
+  }
+}
+
+.header-img img {
+  width: 60%;
+  height: 110%;
+}
+.wrapper.border-frame {
+  margin-top: -105px; /* Réduit l'espacement supérieur */
+  margin-bottom: 10px; /* Ajustez la marge inférieure si nécessaire */
+}
+.title-description {
+  margin-top: 25px; /* Ajustez cette valeur selon vos besoins */
+}
+.title-presentation {
+  margin-left: 40px;
+  
+
+}
+/* Définir l'animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Appliquer l'animation à la classe spécifique lorsque l'élément a la classe 'animate' */
+.frame-wrapper.animate {
+  animation: slideInFromRight 0.7s ease-out forwards;
+}
+
+/* Votre CSS existant */
+.frame-wrapper {
+
+  border: 3px solid #96959585; /* Couleur et largeur du cadre */
+  padding: 40px; /* Augmentez l'espacement interne pour élargir le cadre */
+  border-radius: 15px; /* Coins arrondis */
+  background-color: #778da9; /* Couleur de fond */
+  margin: 30px auto; /* Augmentez l'espacement externe pour plus de séparation */
+  margin-top: 150px; /* Espace au-dessus de la section */
+
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Augmentez l'ombre pour un effet plus prononcé */
+  max-width: 100%; /* Largeur maximale du cadre ajustée pour remplir le conteneur */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  opacity: 0; /* Initialement invisible pour l'animation */
+  transform: translateX(100%); /* Initialement décalé à droite pour l'animation */
+}
+
+
+
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Agras', cursive;
+  font-weight: 700;
+  justify-content: center; /* Centre les éléments de la barre de navigation */
+  gap: 300px; /* Ajuste la distance entre les éléments de la barre de navigation */
+  background-color: #1d3557;
+}
+
+.nav a {
+  color: #ffffff;
+  margin: 0 10px; /* Ajuste la distance entre les éléments de la barre de navigation */
+}
+
+.nav a:hover {
+  color: #706e6e;
+}
+
+.title-description {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-description h2 {
+  font-family: 'Heebo', sans-serif;
+  color: #706e6e;
+  font-size: 2.2em;
+  padding: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-description p {
+  font-family: 'Heebo', sans-serif;
+  color: #706e6e;
+  font-size: 1.2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.wrapper h1 {
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member {
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3 {
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role {
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+.form-flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #778da9;
+  border-radius: 5px;
+}
+
+.form-flex-row-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.form-submit-button {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.form-button-row {
+  display: flex;
+  flex-direction: row;
+}
+
+div.form-group {
+  padding: 15px 30px;
+}
+
+.form-and-donate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 14rem;
+  font-family: 'Heebo', sans-serif;
+  color: #302f2f;
+  font-size: 1.1em;
+}
+
+.form-group label {
   color: white;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+div.card.donate {
+  width: 14em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-submit-button .btn-primary,
+a.btn.donate-button.btn-primary,
+.btn.btn-primary {
+  font-family: 'Heebo', sans-serif;
+  color: #ffffff;
+  background-color: #969595dc;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+}
+
+.form-submit-button .btn-primary:hover,
+.btn.btn-primary:hover {
+  background: #666565dc;
+}
+
+.container {
+  margin: 70px 0;
+}
+
+.container .row img {
+  width: 100%;
+}
+
+.container a {
+  text-align: center;
+  color: #302f2f;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: none;
+  color: #a9c2e6cc;
+}
+p {
+  font-size: 18px; /* Ajustez cette valeur selon la taille souhaitée */
+  line-height: 1.6; /* Optionnel : pour améliorer la lisibilité */
+}
+.pageAndText-container {
+  padding-top: 200px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center content vertically */
+  padding: 40px; /* Padding around the container */
+}
+
+.text-section {
+  flex: 1; /* Takes up equal space on the left */
+  padding-right: -10px; /* Space between text and image */
+  font-size: 18px; /* Font size for the text */
+  line-height: 1.6; /* Line spacing for readability */
+  padding: 40px;
+
+
+
+}
+
+.image-section {
+
+  flex: 1; /* Takes up equal space on the right */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  
+  
+
+
+}
+
+.image-section img {
+  max-width: 80%; /* Image scales to the size of the container */
+  border-radius: 20px; /* Optional: Rounded corners */
+
+}
+
+
+
+.card.mb-3,
+div.card {
+  width: 100%;
+  font-family: 'Heebo', sans-serif;
+  color: #585757;
+} 
+
+.mb-3 h2 {
+  font-size: 2.5em;
+  text-align: center;
+  letter-spacing: 2px;
+} 
+
+h5.card-title {
+  color: #302f2f;
+  font-size: 1.2em;
+} 
+
+p.card-text {
+  color: #302f2f;
+}
+
+div.card-body a {
+  text-decoration: none;
+}
+
+.flex-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-social,
+.footer-organization,
+.footer-information,
+.footer-donate,
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 30px 20px;
+  color: #706e6e;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.flex-footer h4 {
+  margin-bottom: 30px;
+}
+
+@media (min-width:577px) and (max-width: 800px) {
+  .flex-header {
+    height: 100px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .flex-header h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  .title-description h2 {
+    font-size: 1.7em;
+    padding: 10px 0;
+  }
+
+  .title-description p {
+    font-size: 1em;
+  }
+
+  .form-flex-row-img {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-submit-button {
+    margin-bottom: 30px;
+  }
+
+  div.card.donate {
+    width: 11rem;
+    font-size: 0.9em;
+  }
+
+  .mb-3 h2 {
+    font-size: 1.5em;
+  }
+
+  .flex-footer h4 {
+    font-size: 1.1em;
+  }
+
+  .flex-footer p {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .flex-header {
+    height: 100px;
+    margin: 0;
+  }
+
+  .flex-header h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-description h2 {
+    font-size: 1.5em;
+  }
+
+  .form-image img {
+    display: none;
+  }
+
+  .form-and-donate {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-submit-button {
+    margin-bottom: 30px;
+  }
+
+  .form-group label {
+    font-size: 1.2em;
+  }
+
+  input.form-control,
+  select.form-control {
+    font-size: 1em;
+  }
+
+  div.form-group {
+    padding: 10px 20px;
+  }
+
+  div.card.donate {
+    display: none;
+  }
+
+  div.row p {
+    font-size: 1.3em;
+  }
+
+  .mb-3 h2 {
+    font-size: 1.4em;
+  }
+
+  .flex-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-social,
+  .footer-organization,
+  .footer-information,
+  .footer-donate,
+  .footer-newsletter {
+    margin: 10px;
   }
 }

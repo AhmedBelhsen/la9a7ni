@@ -11,20 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.vet-card{
-background-color: aliceblue;
-border-radius: 5px;
-width: 100%;
+.doctor-card{
+background-color: rgb(233, 234, 235);
+border-radius: 10px;
+width: 95%;
 display: flex;
 flex-direction: row;
-margin: 7px;
+margin: 20px;
 align-items: center;
 justify-content: space-between;
-color: blue;
+color: rgb(58, 88, 133);
+padding: 15px 60px;
 }
 .book-button{
-  height: 70%;
+  height: 90%;
   margin: 15px;
-  background-color: blue;
-  color: aliceblue;
+  padding: 5px;
+  background-color: rgb(58, 88, 133);
+  color:rgb(233, 234, 235);
+  border: 0px;
+  border-radius: 5px;
 }
