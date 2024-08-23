@@ -31,7 +31,6 @@ export const Register = () => {
 
   const onSubmit = async (data) => {
     const { email, password, fullName } = data;
-    toast("You have to register");
 
     try {
       const userCreate = await createUserWithEmailAndPassword(auth, email, password);
@@ -43,15 +42,43 @@ export const Register = () => {
         email: email,
       });
 
+      toast.success("Account created successfully");
       navigate("/home");
     } catch (err) {
+      if (err.code === 'auth/email-already-in-use') {
+        toast.error("Email already exists");
+      } else if (err.code === 'auth/invalid-email') {
+        toast.error("Invalid email address");
+      } else if (err.code === 'auth/weak-password') {
+        toast.error("Password is too weak");
+      } else {
+        toast.error("Failed to create account");
+      }
       console.log(err);
+    }
+  };
+
+  const showValidationErrors = () => {
+    if (errors.fullName) {
+      toast.error(errors.fullName.message);
+    }
+    if (errors.email) {
+      toast.error(errors.email.message);
+    }
+    if (errors.password) {
+      toast.error(errors.password.message);
     }
   };
 
   return (
     <div className="signup">
-      <form className='signupform' onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className='signupform'
+        onSubmit={handleSubmit((data) => {
+          showValidationErrors();
+          onSubmit(data);
+        })}
+      >
         <h2>Register</h2>
         <label htmlFor='fullName'>
           Full Name:
@@ -61,7 +88,6 @@ export const Register = () => {
             placeholder='Full Name'
             {...register('fullName')}
           />
-          {errors.fullName && <p>{errors.fullName.message}</p>}
         </label>
         <label htmlFor='email'>
           Email:
@@ -71,7 +97,6 @@ export const Register = () => {
             placeholder='Email'
             {...register('email')}
           />
-          {errors.email && <p>{errors.email.message}</p>}
         </label>
         <label htmlFor='password'>
           Password:
@@ -81,7 +106,6 @@ export const Register = () => {
             placeholder='Password'
             {...register('password')}
           />
-          {errors.password && <p>{errors.password.message}</p>}
         </label>
         <button type="submit">Create Account</button>
         <br />
