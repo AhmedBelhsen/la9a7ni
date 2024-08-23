@@ -1,0 +1,93 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Agras:wght@400;700&display=swap');
+
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+footer {
+    background: #343434;
+    padding-top: 20px;
+
+
+}
+
+.container {
+    width: 1140px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between; /* Espace les éléments de manière égale */
+    gap: 100px; /* Espace entre les blocs de footer-content */
+}
+
+.footer-content {
+    width: 33%;
+    text-align: center;
+    position: relative; /* Ajoute un contexte de positionnement pour les éléments enfants */
+    overflow: hidden; /* Cache les débordements */
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-content p {
+    display: block; /* Change à block pour occuper toute la largeur disponible */
+    margin: 0;
+    padding: 7px;
+}
+
+.footer-content ul {
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons {
+    display: flex; /* Utilisez flexbox pour les icônes */
+    justify-content: center; /* Centre les icônes dans leur conteneur */
+    padding: 0;
+    margin: 0;
+    flex-direction: column; /* Aligne les icônes verticalement */
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+
+
+}
+
+.social-icons li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 25px;
+    transition: color 0.3s ease;
+    gap: 30px;
+    
+}
+
+.social-icons a:hover {
+    color: #f18930;
+}
+
+.bottom-bar {
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar p {
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}

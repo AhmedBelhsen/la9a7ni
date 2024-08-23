@@ -1,0 +1,8 @@
+/* src/components/MapComponent.css */
+.map-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 100%;
+  margin-top: 700px; /* Ajustez la valeur selon vos besoins */
+
+}
