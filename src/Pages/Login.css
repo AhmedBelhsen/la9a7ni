@@ -1,0 +1,121 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+    background-color: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.2rem; /* Adjust the size as needed */
+    margin-top: 0.2rem; /* Adjust spacing if needed */
+  }
+.heading-image {
+    height: 70px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+    top:-50px /* Space between image and text */
+}
+
+.signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background: linear-gradient(135deg, #fffcfc, #4f85d0cc);
+}
+
+.signinform {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label input {
+    width: 70dvh;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+label input:focus {
+    border-color: #a9c2e6cc;
+}
+
+button[type="submit"] {
+    background-color: #a9c2e6cc;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 70dvh;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1f6ad4cc;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #eeeeee;
+}
+
+p {
+    color: #666666;
+}
+
+p a {
+    color: #000000cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+label input {
+    width: 70dvh;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
