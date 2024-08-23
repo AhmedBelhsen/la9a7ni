@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.vet-card{
+background-color: aliceblue;
+border-radius: 5px;
+width: 100%;
+display: flex;
+flex-direction: row;
+margin: 7px;
+align-items: center;
+justify-content: space-between;
+color: blue;
+}
+.book-button{
+  height: 70%;
+  margin: 15px;
+  background-color: blue;
+  color: aliceblue;
+}
