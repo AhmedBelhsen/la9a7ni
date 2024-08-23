@@ -53,7 +53,7 @@ const dotStyle = {
 const textOverlayStyles = {
   position: "absolute",
   bottom: "0px", // Position the text at the bottom of the slide
-  left: "75vh",  // Adjusted for proper positioning
+  left: "110vh",  // Adjusted for proper positioning
   justifyContent: "center",
   top: "40%",    // Adjusted to center vertically
   color: "white",

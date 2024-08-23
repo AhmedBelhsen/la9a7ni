@@ -11,7 +11,7 @@ export const Slider = () => {
   
   const containerStyles = {
     width: "100%",
-    maxWidth: "800px",
+    // maxWidth: "800px",
     height: "400px", 
     margin: "0 auto",
     position: "relative",
