@@ -57,6 +57,7 @@ const getUserLocation = () => {
         (position) => {
           const { latitude, longitude } = position.coords;
           resolve({ latitude, longitude });
+          console.log(position.coords);
         },
         (error) => reject(error)
       );
