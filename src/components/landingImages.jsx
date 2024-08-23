@@ -88,7 +88,7 @@ const ProductImg = styled.img`
 const ProductButton = styled.button`
   color: #ffffff;
   font-size: 1.2rem;
-  background-color: #007bff;
+  background-color: #1D3557;
   padding: 1rem 1.5rem;
   border-radius: 30px; /* Larger radius for a pill shape */
   position: absolute;
