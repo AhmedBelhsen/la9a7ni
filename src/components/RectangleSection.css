@@ -19,7 +19,7 @@
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre avec un effet 3D */
     margin-bottom: -600px; /* Ajuste la marge inférieure selon vos besoins */
     margin-left: 20px; /* Décale le rectangle vers la droite */
-    background-image: url('C:/Users/LENOVO/Desktop/la9a7ni/src/assets/images/post.png'); /* Remplacez par le chemin de votre image */
+    background-image: url('../assets/images/post.png'); /* Remplacez par le chemin de votre image */
     background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
     background-position: center; /* Centre l'image dans le rectangle */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -37,7 +37,7 @@
     flex-direction: column; /* Aligne les éléments en colonne */
     align-items: center; /* Centre horizontalement le texte */
     justify-content: center; /* Centre verticalement le texte */
-    background-image: url('C:/Users/LENOVO/Desktop/la9a7ni/src/assets/images/thanks.png'); /* Remplacez par le chemin de votre image */
+    background-image: url('../assets/images/thanks.png'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* Couvre entièrement le rectangle */
     background-position: center; /* Centre l'image dans le rectangle */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */

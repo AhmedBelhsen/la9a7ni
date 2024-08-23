@@ -32,7 +32,7 @@ export const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("Login Successfully");
-      navigate('/home');
+      navigate(Routes.GETVACCINATED);
     } catch (err) {
       console.error(err);
       // Display a user-friendly error message

@@ -40,7 +40,7 @@ export const Register = () => {
       });
 
       toast.success("Account created successfully");
-      navigate("/home");
+      navigate(Routes.GETVACCINATED);
     } catch (err) {
       if (err.code === 'auth/email-already-in-use') {
         toast.error("Email already exists");

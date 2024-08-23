@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import { db } from '../Config/firebase';
 
 const useVetOfTheDay = () => {
   const [vets, setVets] = useState([]);
