@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import useDoctorLocationName from './hooks/useDoctorLocationName';
-import { useState } from 'react';
+import VetCard from './components/VetCard';
+import useDoctorCurrentLocation from './hooks/useDoctorCurrentLocation';
+
 function App() {
+  const { doctors } = useDoctorCurrentLocation('vets');
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Vets in </h1>
+        <div>
+          {doctors.map((vet) => (
+             
+            <VetCard key={vet.id} vet={vet} />
+            
+          ))}
+        </div>
       </header>
     </div>
   );
