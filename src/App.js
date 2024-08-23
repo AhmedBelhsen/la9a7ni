@@ -1,11 +1,15 @@
-import RoutingModule from './routes/routingModule';
+// src/App.js
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+
+import RoutingModule from './routes/routingModule';
+
 
 function App() {
   return (
     <div className="App">
-    <RoutingModule />
+      <RoutingModule />
     </div>
   );
 }
