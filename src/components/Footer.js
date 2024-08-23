@@ -1,35 +1,51 @@
 import React from 'react';
-import '../App.css';
+import './Footer.css';
+import { CiFacebook, CiInstagram, CiLinkedin } from 'react-icons/ci'; // Importez les icônes nécessaires
 
-const Footer = () => {
+
+function Footer() {
   return (
-    <footer className="footer">
-      <div className="square">
-        <div className="brand">
-          War Viruses
-        </div>
-        <div className="about">
-          <p>We are dedicated to addressing the critical issue of rabies in Tunisia through comprehensive support and resources.</p>
-        </div>
-      </div>
-      <h2 className="heading">Contact Us</h2>
-      <ul className="contact">
-        <li>Email: info@warviruses.com</li>
-        <li>Phone: +216 123 456</li>
-        <li>Address: Tunis, Tunisia</li>
-      </ul>
+    <footer>
 
-      <ul className="social-media">
-        <li><i className="fab fa-facebook-f"></i></li>
-        <li><i className="fab fa-twitter"></i></li>
-        <li><i className="fab fa-instagram"></i></li>
-      </ul>
-
-      <div className="copy">
-        &copy; 2024 War Viruses. All rights reserved.
+      <div className="container">
+        <div className="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email: Info@WarViruses.com</p>
+          <p>Phone: +121 56556 565556</p>
+        </div>
+        <div className="footer-content">
+          <h3>Follow Us</h3>
+          <ul className="social-icons">
+          <li style={{ display: 'flex', alignItems: 'center' }}>
+          <a href="#" aria-label="Facebook" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+            <CiFacebook style={{ fontSize: '24px', marginRight: '10px' }} />
+            <span style={{ fontSize: '16px' }}>Warviruses_Official</span>
+          </a>
+        </li>         
+        <li style={{ display: 'flex', alignItems: 'center' }}>
+          <a href="#" aria-label="Instagram" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+            <CiInstagram style={{ fontSize: '24px', marginRight: '10px' }} />
+            <span style={{ fontSize: '16px' }}>Warviruses_Official</span>
+          </a>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'center' }}>
+          <a href="#" aria-label="LinkedIn" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+            <CiLinkedin style={{ fontSize: '24px', marginRight: '10px' }} />
+            <span style={{ fontSize: '16px' }}>Warviruses_Official</span>
+          </a>
+        </li>          </ul>
+        </div>
+        <div className="footer-content">
+        <h3>Our Location</h3>
+        <p>Location: Charguia-Ariana</p>
+</div>
       </div>
+      <div className="bottom-bar">
+        <p>&copy; 2023 your company. All rights reserved</p>
+      </div>
+
     </footer>
   );
-};
+}
 
 export default Footer;
